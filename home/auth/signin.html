@@ -32,9 +32,12 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         .btn {
+            all: unset;
             width: 87%;
+            display: block;
             background-color: black;
             color: white;
+            
             
         }
         .form-p {
@@ -50,59 +53,39 @@
     </style>
 </head>
 <body>
-    <a href="{% url 'members' %}" >Go to dashboard</a>
+    <a href="./home/index.html" >Go to dashboard</a>
     <form method="post">
         {% csrf_token %}
-
-        <span style="color: red;font-size: 11px;">{{error}}</span>
-       <label>
-        Firstname:
-       </label>
-       <input type="text" name="firstname" placeholder="Firstname">
-
-       <br>
+      
 
        <label>
-        Lastname:
-        </label>
-        <input type="text" name="lastname" placeholder="Lastname">
-
-       <br>
-
-       <label>
-        Username:
+        Username: {{request.user}}
        </label>
        <input type="text" name="username" placeholder="Username">
 
        <br>
 
-       <label>
-        Email
-       </label>
-       <input type="email" name="email" placeholder="Email">
-
-       <br>
+       
 
        <label>
         Password
        </label>
        <input type="password" name="password_1" placeholder="Password">
-       
+
        <br>
 
-       <label>
-        Password
-       </label>
-       <input type="password" name="password_2" placeholder="Retype Password">
-
+       
        <label>
         If you click then you accept our terms and conditions
+
+
        </label>
-       <input type="submit" class="btn">
+       <a href="../index.html" class="btn" style="margin: 0 auto;text-align: center;padding: 10px 0;">Submit</a>
+
 
        <p class="form-p">
-        Don't have an account? <a id="register-link" href="./signin.html">Login Now</a>
-   </p>
+            Don't have an account? <a id="register-link" href="./signup.html">Register Now</a>
+       </p>
     </form>
 </body>
 </html>
