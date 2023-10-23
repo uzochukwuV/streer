@@ -50,16 +50,46 @@
             text-decoration: none;
             text-transform: capitalize;
         }
+        .menuBlock {
+            display: flex;
+            width: 100;
+            justify-content: space-between;
+            height: 50px;
+            align-items: center;
+            padding: 0 40px;
+            background-color: black;
+            color: white;
+        }
     </style>
 </head>
 <body>
+    <section class="G-section">
+        <section class="menu">
+            <div class="menuBlock">
+                <div class="menuImg">
+                    RitaPage
+                </div>
+                <div class="menuItemsBlock"> 
+                <div class="menuItems">
+                    <button>Register</button>
+                </div>
+                </div>
+            </div>
+            <div>
+                
+            </div>
+        </section>
+        <br>
+        <br>
     <a href="./home/index.html" >Go to dashboard</a>
+    <br>
+    <br>
     <form method="post">
-        {% csrf_token %}
+       
       
 
        <label>
-        Username: {{request.user}}
+        Username: 
        </label>
        <input type="text" name="username" placeholder="Username">
 

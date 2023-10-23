@@ -49,14 +49,42 @@
             text-decoration: none;
             text-transform: capitalize;
         }
+        .menuBlock {
+            display: flex;
+            width: 100;
+            justify-content: space-between;
+            height: 50px;
+            align-items: center;
+            padding: 0 40px;
+            background-color: black;
+            color: white;
+        }
     </style>
 </head>
 <body>
-    <a href="{% url 'members' %}" >Go to dashboard</a>
+    <section class="G-section">
+        <section class="menu">
+            <div class="menuBlock">
+                <div class="menuImg">
+                    RitaPage
+                </div>
+                <div class="menuItemsBlock"> 
+                <div class="menuItems">
+                    <button>Register</button>
+                </div>
+                </div>
+            </div>
+            <div>
+                
+            </div>
+        </section>
+        <br>
+    <a href="../index.html" >Go to dashboard</a>
+    <br><br>
     <form method="post">
-        {% csrf_token %}
+      
 
-        <span style="color: red;font-size: 11px;">{{error}}</span>
+       
        <label>
         Firstname:
        </label>
